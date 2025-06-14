@@ -1,0 +1,66 @@
+Descrição do Projeto: Relatório de Vendas Automatizado
+
+Objetivo:
+O objetivo deste projeto é automatizar o processo de geração de relatórios de vendas, 
+utilizando um conjunto integrado de ferramentas: Excel, Python, SQL Server, e Power BI. 
+A solução foi projetada para centralizar os dados de vendas, garantir que as informações 
+estejam sempre atualizadas e fornecer visualizações dinâmicas para facilitar a análise e
+tomada de decisões estratégicas.
+
+Fluxo do Processo:
+
+1.Criação da Tabela de Vendas no Excel:
+• O processo iniciou com a criação da tabela de vendas no Excel, contendo informações  essenciais sobre as vendas, 
+  como ID_Venda, Data_Venda, Produto, Categoria, Preço_Unitário, Quantidade, Cliente, Região e Forma_Pagamento.
+
+• Após a criação da tabela, o arquivo foi exportado para o formato CSV, que foi utilizado para a próxima fase do processo.
+
+2. Leitura e Processamento dos Dados (Python e CSV):
+• Utilizando Python, foi feito o processamento do arquivo vendas.csv. Com a biblioteca pandas, o arquivo foi lido e transformado,
+   incluindo o cálculo de uma nova coluna, "Total_Vendas", que foi gerada multiplicando a Quantidade pelo Preço_Unitário, 
+   resultando no valor total de cada venda.
+
+
+3. Criação do Banco de Dados (SQL Server - SSMS):
+• Com os dados processados, foi criada uma conexão entre Python e o SQL Server para armazenar as informações 
+  em um banco de dados. Utilizando o ambiente SQL Server Management Studio (SSMS), foi criado o banco de dados RelatorioVendas.
+• Dentro do banco, a tabela Vendas foi criada com a estrutura necessária para armazenar os dados, incluindo todas as colunas
+  relevantes (como ID_Venda, Data_Venda, Produto, Total_Vendas, entre outras).
+• O código Python, utilizando a biblioteca pyodbc, foi responsável pela conexão com o SQL Server e execução das consultas para 
+  criar o banco e a tabela, se necessário.
+
+
+4. Inserção dos Dados no Banco de Dados:
+• Com a tabela pronta, os dados processados no arquivo CSV foram inseridos diretamente na tabela Vendas do banco de dados. 
+  Cada linha do arquivo foi inserida por meio de um script Python, garantindo que as informações estivessem corretamente 
+  registradas no banco de dados.
+
+• Essa etapa foi automatizada para garantir que, sempre que novos dados fossem adicionados ou o arquivo fosse atualizado,
+  a tabela no banco fosse também atualizada automaticamente.
+
+5. Integração com Power BI:
+• Após a inserção dos dados no banco de dados, o próximo passo foi integrar o SQL Server com o Power BI. Utilizando a 
+  conexão direta entre o Power BI e o banco de dados RelatorioVendas, foi possível criar dashboards interativos e relatórios
+  detalhados sobre as vendas.
+
+• As visualizações no Power BI permitem analisar dados de forma dinâmica, com gráficos, tabelas e filtros que ajudam
+  a entender o desempenho de vendas em tempo real.
+
+
+Tecnologias e Ferramentas Utilizadas:
+• Excel: Usado para criar a tabela de vendas inicial, que foi exportada para o formato CSV e depois processada.
+• Python: Utilizado para processamento dos dados, cálculo do Total_Vendas, e integração com o SQL Server.
+  - pandas: Biblioteca para manipulação e transformação dos dados.
+  - pyodbc: Usada para conectar o Python ao SQL Server e executar comandos SQL.
+• SQL Server (SSMS): Banco de dados relacional onde os dados de vendas foram armazenados, com o ambiente 
+  de desenvolvimento sendo o SQL Server Management Studio (SSMS).
+• Power BI: Ferramenta de visualização de dados usada para criar dashboards interativos e relatórios de vendas.
+
+
+Conclusão:
+Com este projeto, foi possível construir uma solução eficiente para a automação da análise de vendas. 
+Utilizando o Excel para a criação inicial dos dados, Python para o processamento e integração com o SQL Server (SSMS), 
+e Power BI para a visualização dinâmica, criando um fluxo de trabalho automatizado que permite à equipe tomar decisões
+rápidas e informadas com dados atualizados em tempo real.
+
+
