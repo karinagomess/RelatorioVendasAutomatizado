@@ -42,7 +42,7 @@ No arquivo relatorio_vendas.py, você pode rodar o código para processar os dad
 
 Passos:
 
-Certifique-se de ter o arquivo vendas.csv com os dados de vendas.
+Certifique de ter o arquivo vendas.csv com os dados de vendas.
 
 Execute o script Python com o seguinte comando:
 
