@@ -48,5 +48,17 @@ O script Python irá:
 - Importe a tabela Vendas para começar a criar relatórios e dashboards interativos.
   
   ---
+  ## Imagens dos dashboards
+
+  Painel 1 - Geral
+  <img width="1305" height="721" alt="Geral" src="https://github.com/user-attachments/assets/97d898d0-1b5a-42eb-bf5b-4fffe06575ff" />
+  
+  Painel 2 - Análise por produto
+  <img width="1311" height="722" alt="Análise por Produto" src="https://github.com/user-attachments/assets/1356d01b-6f27-457b-8a6c-34321c863080" />
+
+
+  ---
 ### Autora
 Karina Gomes | Apaixonada por dados e visualizações 
+
+
